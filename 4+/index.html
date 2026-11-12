@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Руми 4+ — рестобар</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Руми <b>4+</b></a>
+    <nav>
+      <a href="#galereya">Расмҳо</a>
+      <a href="#karaoke">Караоке</a>
+      <a href="#menu">Меню</a>
+      <a href="#tamos">Тамос</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Руми<br><span>4+</span></h1>
+        <p>Рестобар барои шомҳои гарм: таомҳои болаззат, нӯшокиҳо ва мусиқии нарм.</p>
+        <a class="btn" href="#menu">Менюро бинед</a>
+        <a class="btn ghost" href="#tamos">Ҷой банд кунед</a>
+      </div>
+      <div class="arch">
+        <div class="photo im i5" role="img" aria-label="Руми 4+"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galereya">
+    <div class="wrap">
+      <h2>Дар дохили Руми</h2>
+      <p class="lead">Фазои мо — чароғҳои нарм, курсиҳои бароҳат ва ҷойҳо барои гурӯҳ ва ду нафар.</p>
+      <div class="gallery">
+        <div class="photo big im i1" role="img" aria-label="Толори асосӣ">Толори асосӣ</div>
+        <div class="photo im i2" role="img" aria-label="Бар">Бар</div>
+        <div class="photo im i3" role="img" aria-label="Шоми Руми">Шоми Руми</div>
+        <div class="photo wide im i6" role="img" aria-label="Толор">Толор</div>
+        <div class="photo im i4" role="img" aria-label="Таомҳо">Таомҳо</div>
+        <div class="photo im i5" role="img" aria-label="Караоке">Караоке</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="karaoke">
+    <div class="wrap kar">
+      <div class="photo im i5" role="img" aria-label="Хонаи караоке"></div>
+      <div>
+        <h2>Караоке</h2>
+        <p class="lead">Хонаи ахтисоси VIP бо дивонҳои нарм, чароғҳои рангаранг ва экрани барои суруд. Барои достон ва гурӯҳҳои 4 нафар ва бисёртар.</p>
+        <a class="btn" href="tel:+992929004004">Ҷой банд кардан</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="alt">
+    <div class="wrap">
+      <h2>Меню</h2>
+      <p class="lead">Нархҳо бо сомонӣ. Маҳсулоти дилхоҳро ба сабад илова кунед.</p>
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div id="menus"></div>
+    </div>
+  </section>
+
+  <section id="tamos">
+    <div class="wrap">
+      <h2>Тамос</h2>
+      <div class="contact">
+        <dl>
+          <dt>Суроға</dt><dd>Дар харита бинед</dd>
+          <dt>Вақти кор</dt><dd>Ҳар рӯз аз 16:00 то 03:00</dd>
+          <dt>Телефон</dt><dd><a href="tel:+992929004004">+992 92 900 40 04</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/rumi_resto_bar" target="_blank" rel="noopener">@rumi_resto_bar</a></dd>
+        </dl>
+        <div class="mapbox">
+          <p>Моро дар харита ёбед</p>
+          <a class="btn" href="https://maps.app.goo.gl/cEaCuphaMXghireRA?g_st=ic" target="_blank" rel="noopener">Харитаи Google</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Руми 4+. Ҳамаи ҳуқуқҳо ҳифз шудаанд.</footer>
+
+<button class="cart-fab" id="cartFab" type="button" aria-label="Сабади фармоиш">
+  <span>Сабад</span><b id="cartCount">0</b>
+</button>
+
+<div class="modal-backdrop" id="cartModal" aria-hidden="true">
+  <section class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <button class="modal-close" id="closeCart" type="button" aria-label="Пӯшидан">×</button>
+    <h2 id="cartTitle">Сабади фармоиш</h2>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-total"><span>Ҳамагӣ:</span><strong id="cartTotal">0 сомонӣ</strong></div>
+    <div class="checkout">
+      <label for="tableNumber">Рақами стол</label>
+      <input id="tableNumber" type="number" min="1" step="1" inputmode="numeric" placeholder="Масалан: 5">
+      <p class="form-note">Барои фармоиш танҳо рақами стол лозим аст.</p>
+      <button class="checkout-btn" id="sendOrder" type="button">Фиристодани заказ ба WhatsApp</button>
+      <button class="receipt-btn" id="printReceipt" type="button">Чоп кардани чек</button>
+    </div>
+  </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
